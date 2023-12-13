@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .contents1, .contents2{
+            display: none;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        p, h1,h2,h3,h4,h5,h6,b,a{
+            color: white;
+
+        }
+        div.selections{
+            background-color: darkblue;
+            overflow: auto;
+            white-space: nowrap;
+        }
+
+    </style>
+    </head>
+    <body >
+        <div class="w3-container">
+            
+        <h2 class="w3-center"><b>Games Galore</b></h2>
+            <div class="w3-half w3-black w3-cell">
+                <button class="w3-cell-row w3-center w3-button button1"><b>compatibility</b></button>
+                <div class="w3-cell-row contents1">
+                    <button class="w3-button w3-cell-row">windows</button>
+                    <button class="w3-button w3-cell-row">mac</button>
+                    <button class="w3-button w3-cell-row">linux</button>
+                </div>
+            </div>
+
+            <div class="w3-half w3-black w3-cell">
+                <button class="w3-cell-row w3-center w3-button button2"><b>genre</b></button>
+                <div class="w3-cell-row contents2">
+                    <button class="w3-button w3-cell-row">RPG</button>
+                    <button class="w3-button w3-cell-row">Action</button>
+                    <button class="w3-button w3-cell-row">war strategy (including <b>RTS</b>)</button>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="w3-center"><b>(text based content)</b></p>
+        <div class="w3-center selections">
+            <p>quick game acess and download</p>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+            <a class="" href=""><img src="image dummy.png" width="150" height="150" alt=""></a>
+        </div>
+        <p class="w3-center"><b>click to download game feature</b></p>
+        <p class="w3-center"><b>credit:</b></p>
+        <p class="w3-center">.......</p>
+
+
+
+
+
+
+
+        <script>
+            var absorbed1 = true
+            var absorbed2 = true
+                $(document).ready(function(){
+                    $('.button1').click(function(){
+                        if (absorbed1){
+                            $('.contents1').slideDown('slow')
+                            absorbed1 = false
+                        } else {
+                            $('.contents1').slideUp('slow')
+                            absorbed1 = true
+                        }
+                    })
+
+                    $('.button2').click(function(){
+                        if (absorbed2){
+                            $('.contents2').slideDown('slow')
+                            absorbed2 = false
+                        } else {
+                            $('.contents2').slideUp('slow')
+                            absorbed2 = true
+                        }
+                    })
+                    
+                })
+        </script>
+    </body>
+</html>
