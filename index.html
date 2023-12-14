@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="escape.png">
     <style>
         .contents1, .contents2{
             display: none;
@@ -17,8 +18,12 @@
             overflow: auto;
             white-space: nowrap;
         }
+        .selections a:hover {
+            transform:scale(1.4);
+        }
 
     </style>
+    <title>Games Galore</title>
     </head>
     <body>
         <div class="w3-container">
@@ -46,11 +51,9 @@
                     <button class="w3-cell-row w3-center w3-button button3" href="#"><b>about us</b></button>
                 </div>
         </div>
-
-        <p class="w3-center"><b>(text based content)</b></p>
-        <div class="w3-center selections">
-            <p>quick game acess and download</p>
-            <a class="" href="game_view.html"><img src="image_dummy.png" width="150" height="150" alt=""></a>
+        <p class="w3-center">quick game acess and download</p>
+        <div class="w3-center selections" style="padding-top:3px; padding-bottom:3px">
+            <a class="" href="game_view.html"><img src="escape.png" width="150" height="150" alt=""></a>
             <a class="" href="game_view.html"><img src="image_dummy.png" width="150" height="150" alt=""></a>
             <a class="" href="game_view.html"><img src="image_dummy.png" width="150" height="150" alt=""></a>
             <a class="" href="game_view.html"><img src="image_dummy.png" width="150" height="150" alt=""></a>
@@ -70,12 +73,6 @@
         <p class="w3-center"><b>click to download game feature</b></p>
         <p class="w3-center"><b>credit:</b></p>
         <p class="w3-center">.......</p>
-
-
-
-
-
-
 
         <script>
             var absorbed1 = true
@@ -105,7 +102,12 @@
                             absorbed2 = true
                         }
                     })
-                    
+                    $('.button3').click(function(){
+                        $('.contents1').slideUp('slow')
+                        $('.contents2').slideUp('slow')
+                        absorbed1 = true
+                        absorbed2 = true
+                    })
                 })
         </script>
     </body>
