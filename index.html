@@ -81,7 +81,10 @@
                     $('.button1').click(function(){
                         if (absorbed1){
                             $('.contents1').slideDown('slow')
+                            $('.contents2').slideUp('slow')
+                            absorbed2 = true
                             absorbed1 = false
+
                         } else {
                             $('.contents1').slideUp('slow')
                             absorbed1 = true
@@ -91,6 +94,8 @@
                     $('.button2').click(function(){
                         if (absorbed2){
                             $('.contents2').slideDown('slow')
+                            $('.contents1').slideUp('slow')
+                            absorbed1 = true
                             absorbed2 = false
                         } else {
                             $('.contents2').slideUp('slow')
