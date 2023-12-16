@@ -20,6 +20,9 @@
             overflow: auto;
             white-space: nowrap;
         }
+    .RTS-page,.Action-page,.RPG-page{
+        display: none;
+    }
 
     </style>
     </head>
@@ -133,16 +136,18 @@
                     })
                     
                     $('.access-RPG').click(function(){
-                        if(!pageRTS){
+                        if(!pageRPG){
                             $('.RPG-page').show()
                             $('.home-page').hide()
                             $('.Action-page').hide()
                             $('.RTS-page').hide()
+                            pageRPG = true
                         } else{
                             $('.RPG-page').hide()
                             $('.home-page').show()
                             $('.Action-page').hide()
                             $('.RTS-page').hide()
+                            pageRPG = false
                         }
                     })
                     $('.access-RTS').click(function(){
@@ -151,11 +156,13 @@
                             $('.home-page').hide()
                             $('.Action-page').hide()
                             $('.RTS-page').show()
+                            pageRTS = true
                         } else{
                             $('.RPG-page').hide()
                             $('.home-page').show()
                             $('.Action-page').hide()
                             $('.RTS-page').hide()
+                            pageRTS = false
                         }
                     })
                     $('.access-Action').click(function(){
@@ -164,11 +171,13 @@
                             $('.home-page').hide()
                             $('.Action-page').show()
                             $('.RTS-page').hide()
+                            pageAction = true
                         } else{
                             $('.RPG-page').hide()
                             $('.home-page').show()
                             $('.Action-page').hide()
                             $('.RTS-page').hide()
+                            pageAction = false
                         }
                     })
 
