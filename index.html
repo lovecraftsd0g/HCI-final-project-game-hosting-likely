@@ -39,9 +39,9 @@
             <div class="w3-half w3-black w3-cell">
                 <button class="w3-cell-row w3-center w3-button button2"><b>genre</b></button>
                 <div class="w3-cell-row contents2">
-                    <button class="w3-button w3-cell-row">RPG</button>
-                    <button class="w3-button w3-cell-row">Action</button>
-                    <button class="w3-button w3-cell-row">war strategy (including <b>RTS</b>)</button>
+                    <button class="w3-button w3-cell-row access-RPG">RPG</button>
+                    <button class="w3-button w3-cell-row access-Action">Action</button>
+                    <button class="w3-button w3-cell-row access-RTS">war strategy (including <b>RTS</b>)</button>
                 </div>
             </div>
 
@@ -92,14 +92,14 @@
                 </div>
             </div>
         </div>
-        <div class="RPG-page">
-
+        <div class="RPG-page w3-container">
+            <p class="w3-center">RPG</p>
         </div>
-        <div class="Action">
-
+        <div class="Action-page  w3-container">
+            <P class="w3-center">ACTION</P>
         </div>
-        <div class="R">
-
+        <div class="RTS-page w3-container">
+            <P class="w3-center">RTS</P>
         </div>
 
 
@@ -108,6 +108,9 @@
         <script>
             var absorbed1 = true
             var absorbed2 = true
+            var pageAction = false
+            var pageRPG = false
+            var pageRTS = false
                 $(document).ready(function(){
                     $('.button1').click(function(){
                         if (absorbed1){
@@ -128,6 +131,49 @@
                             absorbed2 = true
                         }
                     })
+                    
+                    $('.access-RPG').click(function(){
+                        if(!pageRTS){
+                            $('.RPG-page').show()
+                            $('.home-page').hide()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                        } else{
+                            $('.RPG-page').hide()
+                            $('.home-page').show()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                        }
+                    })
+                    $('.access-RTS').click(function(){
+                        if(!pageRTS){
+                            $('.RPG-page').hide()
+                            $('.home-page').hide()
+                            $('.Action-page').hide()
+                            $('.RTS-page').show()
+                        } else{
+                            $('.RPG-page').hide()
+                            $('.home-page').show()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                        }
+                    })
+                    $('.access-Action').click(function(){
+                        if(!pageAction){
+                            $('.RPG-page').hide()
+                            $('.home-page').hide()
+                            $('.Action-page').show()
+                            $('.RTS-page').hide()
+                        } else{
+                            $('.RPG-page').hide()
+                            $('.home-page').show()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                        }
+                    })
+
+
+
                     
                 })
         </script>
