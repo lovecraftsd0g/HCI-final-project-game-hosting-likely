@@ -10,9 +10,6 @@
                 display: none;
             }
         </style>
-        <script>
-            
-        </script>
     </head>
     <body>
         <br><br>
@@ -30,5 +27,17 @@
                 </p>
             </div>
         </div>
+        <script>
+            var read = false
+            $(document).ready(function(){
+                $('.morecontent').click(function(){
+                    if (!read){
+                        $('.more-content').slideDown('slow')
+                    } else{
+                        $('.more-content').slideUp('slow')
+                    }
+                })
+            })
+        </script>
     </body>
 </html>
