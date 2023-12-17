@@ -14,13 +14,21 @@
         .more-content{
             display: none;
         }
+        .homepagebutton{
+            position: fixed;
+            top: 5px;
+            left: 10px;
+        }
         </style>
     </head>
     <body>
         <div class="w3-container">
+            <button class="w3-button homepagebutton" onclick="onclicli('index.html')"><p>Home Page</p></button>
             <div class="w3-container w3-center">
                 <h3 style="color: blue; background-color:rgb(8, 6, 66); width: 300px; margin: auto;">about us</h3>
             </div>
+            <br>
+            <br>
         </div>
             <p class="w3-center">
                 we are a small child orginization of a company specialising in education, the company we speak of is binus,
@@ -28,13 +36,16 @@
                 in order to gain experience in the industry of game creation
             </p>
             <p class=" w3-center more-content">
-                jjjjj
+                as you can see in the given extension, we as a temporary small orginization of students have no need to inform you the consumer further all that you will need to know is at the above
             </p>
             <div class="w3-center">
                 <button class="w3-button w3-center morecontent"><p>Read more</p></button>
             </div>
         </div>
         <script>
+            function onclicli(urlink){
+                window.location.href = urlink
+            }
             var read = false
             $(document).ready(function(){
                 $('.morecontent').click(function(){
