@@ -33,8 +33,10 @@
                 $('.morecontent').click(function(){
                     if (!read){
                         $('.more-content').slideDown('slow')
+                        read = true
                     } else{
                         $('.more-content').slideUp('slow')
+                        read = false
                     }
                 })
             })
