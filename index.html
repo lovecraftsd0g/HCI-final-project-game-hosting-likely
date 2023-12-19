@@ -23,7 +23,7 @@
             overflow: auto;
             white-space: nowrap;
         }
-    .RTS-page,.Action-page,.RPG-page{
+    .RTS-page,.Action-page,.RPG-page,.mac-page,.win-page,.lin-page{
         display: none;
     }
     .aboutbutton{
@@ -43,9 +43,9 @@
             <div class="w3-half w3-black w3-cell">
                 <button class="w3-cell-row w3-center w3-button button1"><b>compatibility</b></button>
                 <div class="w3-cell-row contents1">
-                    <button class="w3-button w3-cell-row">windows</button>
-                    <button class="w3-button w3-cell-row">mac</button>
-                    <button class="w3-button w3-cell-row">linux</button>
+                    <button class="w3-button w3-cell-row access-windows">windows</button>
+                    <button class="w3-button w3-cell-row access-mac">mac</button>
+                    <button class="w3-button w3-cell-row access-linux">linux</button>
                 </div>
             </div>
 
@@ -115,6 +115,15 @@
         <div class="RTS-page w3-container">
             <P class="w3-center">RTS</P>
         </div>
+        <div class="win-page w3-container">
+            <p class="w3-center">Windows</p>
+        </div>
+        <div class="lin-page  w3-container">
+            <P class="w3-center">Linux</P>
+        </div>
+        <div class="mac-page w3-container">
+            <P class="w3-center">Mac</P>
+        </div>
 
 
 
@@ -128,6 +137,9 @@
             var pageAction = false
             var pageRPG = false
             var pageRTS = false
+            var pagemac = false
+            var pagelin = false
+            var pagewin = false
                 $(document).ready(function(){
                     $('.button1').click(function(){
                         if (absorbed1){
@@ -148,28 +160,14 @@
                             absorbed2 = true
                         }
                     })
-                    
-                    $('.access-RPG').click(function(){
-                        if(!pageRPG){
-                            $('.RPG-page').show()
-                            $('.home-page').hide()
-                            $('.Action-page').hide()
-                            $('.RTS-page').hide()
-                            pageRPG = true
-                        } else{
-                            $('.RPG-page').hide()
-                            $('.home-page').show()
-                            $('.Action-page').hide()
-                            $('.RTS-page').hide()
-                            pageRPG = false
-                        }
-                    })
                     $('.access-RTS').click(function(){
                         if(!pageRTS){
                             $('.RPG-page').hide()
                             $('.home-page').hide()
                             $('.Action-page').hide()
                             $('.RTS-page').show()
+                            pageRPG = false
+                            pageAction = false
                             pageRTS = true
                         } else{
                             $('.RPG-page').hide()
@@ -179,12 +177,17 @@
                             pageRTS = false
                         }
                     })
+
+
+
                     $('.access-Action').click(function(){
                         if(!pageAction){
                             $('.RPG-page').hide()
                             $('.home-page').hide()
                             $('.Action-page').show()
                             $('.RTS-page').hide()
+                            pageRPG = false
+                            pageRTS = false
                             pageAction = true
                         } else{
                             $('.RPG-page').hide()
@@ -192,6 +195,82 @@
                             $('.Action-page').hide()
                             $('.RTS-page').hide()
                             pageAction = false
+                        }
+                    })
+                    $('.access-RPG').click(function(){
+                        if(!pageRPG){
+                            $('.RPG-page').show()
+                            $('.home-page').hide()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                            pageRPG = true
+                            pageRTS = false
+                            pageAction = false
+                        } else{
+                            $('.RPG-page').hide()
+                            $('.home-page').show()
+                            $('.Action-page').hide()
+                            $('.RTS-page').hide()
+                            pageAction = false
+                        }})
+                    
+
+
+
+
+
+
+
+
+                    $('.access-mac').click(function(){
+                        if(!pagemac){
+                            $('.mac-page').show()
+                            $('.home-page').hide()
+                            $('.win-page').hide()
+                            $('.lin-page').hide()
+                            pagewin = false
+                            pagelin = false
+                            pagemac = true
+                        } else{
+                            $('.mac-page').hide()
+                            $('.home-page').show()
+                            $('.win-page').hide()
+                            $('.lin-page').hide()
+                            pagemac = false
+                        }
+                    })
+                    $('.access-linux').click(function(){
+                        if(!pagelin){
+                            $('.mac-page').hide()
+                            $('.home-page').hide()
+                            $('.win-page').hide()
+                            $('.lin-page').show()
+                            pagewin = false
+                            pagemac = false
+                            pagelin = true
+                        } else{
+                            $('.mac-page').hide()
+                            $('.home-page').show()
+                            $('.win-page').hide()
+                            $('.lin-page').hide()
+                            pagelin = false
+                        }
+                    })
+                    $('.access-windows').click(function(){
+                        if(!pagewin){
+                            $('.mac-page').hide()
+                            $('.home-page').hide()
+                            $('.win-page').show()
+                            $('.lin-page').hide()
+                            pagemac = false
+                            pagelin = false
+                            pagewin = true
+                        } else{
+                            $('.mac-page').hide()
+                            $('.home-page').show()
+                            $('.win-page').hide()
+                            $('.lin-page').hide()
+                            pagewin = false
                         }
                     })
 
